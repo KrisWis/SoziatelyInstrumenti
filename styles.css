@@ -1,0 +1,255 @@
+html,
+body {
+  min-width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  padding: 0 100px;
+}
+@media (max-width: 1200px) {
+  body {
+    padding: 0 20px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.presentations--caption {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 127%;
+  letter-spacing: 0em;
+  color: #464646;
+
+  @media (max-width: 1200px) {
+    text-align: center;
+  }
+}
+
+.presentations--tabs {
+  display: flex;
+  margin-top: 20px;
+  gap: 15px;
+
+  @media (max-width: 1200px) {
+    justify-content: center;
+  }
+}
+
+.presentations--tab {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 127%;
+  text-align: center;
+  color: #000;
+  cursor: pointer;
+}
+.presentations--tab--active {
+  position: relative;
+}
+.presentations--tab--active:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  bottom: -3px;
+}
+
+.presentations--buttons {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.presentations--button {
+  border-radius: 10px;
+  width: 155px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 50px transparent;
+  transition: 0.3s linear all;
+}
+.presentations--button:hover {
+  transform: scale(1.05);
+}
+.presentations--button--text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 127%;
+  text-align: center;
+  color: #fff;
+}
+.presentations--button--email {
+  background: #18719c;
+}
+.presentations--button--email:hover {
+  box-shadow: 0 0 20px #18719c;
+}
+.presentations--button--download {
+  background: #dc2a34;
+}
+.presentations--button--download:hover {
+  box-shadow: 0 0 20px #dc2a34;
+}
+.presentations--button--link {
+  background: #fbb94f;
+}
+.presentations--button--link:hover {
+  box-shadow: 0 0 20px #fbb94f;
+}
+
+.presentations--buttons--wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+}
+.presentations--link {
+  transition: 0.3s linear all;
+  position: relative;
+  top: 3px;
+}
+.presentations--link:hover {
+  transform: scale(1.05);
+}
+.presentations--button--withoutsvg {
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 173px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 127%;
+  text-align: center;
+  color: #000;
+  transition: 0.3s linear all;
+  box-shadow: 0 0 50px transparent;
+}
+.presentations--button--withoutsvg:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #000;
+}
+.presentations--button--withoutsvg--add {
+  color: #fff;
+  background: #18719c;
+  border: none;
+}
+.presentations--button--withoutsvg--add:hover {
+  box-shadow: 0 0 20px #18719c;
+}
+.presentations--items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+  margin-top: 100px;
+}
+@media (max-width: 1200px) {
+  .presentations--items {
+    margin-top: 50px;
+  }
+}
+.presentations--item {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 30px;
+  gap: 8px;
+}
+@media (max-width: 1200px) {
+  .presentations--item {
+    width: 32%;
+  }
+}
+@media (max-width: 800px) {
+  .presentations--item {
+    width: 48%;
+  }
+}
+@media (max-width: 500px) {
+  .presentations--item {
+    width: 100%;
+  }
+}
+.presentations--item--img {
+  width: 100%;
+  height: 30%;
+}
+.presentations--item--title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 102%;
+  color: #000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.presentations--item--span {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 122%;
+  color: #000;
+}
+.presentations--item--span--little {
+  font-size: 16px;
+}
+.presentations--item--icons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+  gap: 20px;
+}
+.presentations--item--icon {
+  transition: 0.3s linear all;
+  cursor: pointer;
+}
+.presentations--item--icon * {
+  transition: 0.3s linear all;
+}
+.presentations--item--icon:hover {
+  transform: scale(1.05);
+}
+.presentations--item--icon:hover * {
+  fill: #dc2a34;
+  fill-opacity: 1;
+} /*# sourceMappingURL=styles.css.map */
